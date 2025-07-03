@@ -1,80 +1,106 @@
-# Meal Planning App
+# Meal: Modern Meal Planning & Kitchen Management App
 
-A modern, responsive meal planning application built with Next.js, React, and TypeScript.
+Meal is a modern, responsive web application for meal planning, recipe management, and kitchen organization. Built with Next.js, React, and TypeScript, it empowers users to efficiently plan meals, manage pantry inventory, and streamline cooking with interactive tools.
 
-## Performance Optimizations
+## 🚀 Project Overview
 
-This application has been optimized for production performance with the following key improvements:
+Meal helps individuals and families:
 
-### React Performance Optimizations
+- Discover, create, and manage recipes
+- Plan weekly meals and generate shopping lists
+- Track pantry inventory and reduce food waste
+- Use cooking mode with step-by-step instructions and timers
 
-1. **Component Memoization**: All major components use `React.memo()` to prevent unnecessary re-renders
-2. **useMemo Hooks**: Expensive calculations are memoized to avoid recalculation on every render
-3. **useCallback Hooks**: Event handlers and functions are memoized to maintain referential equality
-4. **Component Splitting**: Large components have been broken down into smaller, focused components
+## 🛠️ Key Features
 
-### Specific Optimizations in Cooking Mode
+- **Recipe Management:** Add, edit, and view recipes with rich details
+- **Cooking Mode:** Guided, distraction-free cooking with timers and progress tracking
+- **Pantry Manager:** Track ingredients, manage stock, and get suggestions based on available items
+- **Kitchen Timers:** Multiple, customizable timers for multitasking
+- **Responsive UI:** Optimized for mobile, tablet, and desktop
+- **Performance Optimizations:** Memoization, code splitting, and efficient state management
+- **Secure Authentication:** (If implemented) User accounts and data privacy
+- **AI-Powered Recipe Generation:** Instantly generate custom recipes using advanced AI (LLM) based on user preferences, dietary restrictions, and available ingredients
 
-- **CookingHeader**: Memoized header component with progress tracking
-- **CurrentStepCard**: Optimized step display with memoized navigation
-- **StepNavigation**: Efficient step list rendering with virtual scrolling considerations
-- **TimersSection**: Optimized timer management with minimal re-renders
-- **KitchenTimer**: Split into sub-components (TimerDisplay, TimerControls) for better performance
-- **RecipeInfo & ChefTips**: Memoized static content components
+## 🏗️ Technology Stack
 
-### Performance Benefits
+- **Frontend:** React, Next.js, TypeScript
+- **Styling:** CSS Modules, modern CSS
+- **State Management:** React Context/State Hooks
+- **Backend/API:** Next.js API routes (extendable to external APIs)
+- **Testing:** (Recommend) Jest, React Testing Library
+- **Build Tool:** Bun, Node.js
 
-- **Reduced Re-renders**: Components only re-render when their specific props change
-- **Faster Navigation**: Step transitions are optimized with memoized callbacks
-- **Efficient Timer Updates**: Timer components update independently without affecting other UI elements
-- **Memory Optimization**: Proper cleanup of intervals and event listeners
-- **Bundle Size**: Optimized imports and component structure
+## ⚙️ Architecture & Best Practices
 
-### Best Practices Implemented
+- **Component-based Design:** Modular, reusable UI components
+- **SOLID Principles:** Maintainable and extensible codebase
+- **Performance:**
+  - React.memo, useMemo, useCallback for optimal rendering
+  - Code splitting and lazy loading
+  - Efficient timer and event management
+- **Security:**
+  - Input validation and error handling
+  - (If applicable) Secure authentication and least-privilege data access
+- **Scalability:**
+  - Stateless services, modular structure, and easy API extension
+  - **AI Integration:** Uses large language models (LLMs) to generate recipes and ingredient substitutions dynamically (see `lib/llm.ts` for implementation)
 
-- **Readability First**: Code is written for maintainability and readability
-- **Testability**: Components are designed to be easily testable
-- **Maintainability**: Clear separation of concerns and modular architecture
-- **Performance**: Optimizations applied after profiling and identifying bottlenecks
+## 🏁 Getting Started
 
-## Getting Started
+1. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
+2. **Run the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
+3. **Open your browser:**
+   Visit [http://localhost:3000](http://localhost:3000)
 
-First, run the development server:
+4. **Edit pages/components:**
+   Modify files in `app/` or `components/` to customize features.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🧪 Testing
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- (Recommended) Add and run tests with:
+  ```bash
+  npm test
+  # or
+  yarn test
+  ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌐 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Deploy easily on [Vercel](https://vercel.com/) or any platform supporting Next.js.
+- See [Next.js deployment docs](https://nextjs.org/docs/app/building-your-application/deploying).
 
-## Learn More
+## 🤝 Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Contributions are welcome! Please open issues or submit pull requests for new features, bug fixes, or improvements.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+MIT (or specify your license here)
 
-## Deploy on Vercel
+## 🙏 Credits
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Built with [Next.js](https://nextjs.org/), [React](https://react.dev/), and [TypeScript](https://www.typescriptlang.org/)
+- Inspired by modern kitchen and meal planning needs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
 
-## Features
-
-- Recipe management and cooking mode
-- Interactive timers with notifications
-- Responsive design for all devices
-- Performance-optimized components
+For questions or feedback, please open an issue or contact the maintainer.

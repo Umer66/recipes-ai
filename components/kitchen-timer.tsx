@@ -30,7 +30,7 @@ const TimerDisplay = React.memo(
     const textColor = useMemo(() => {
       if (isFinished) return "text-green-600";
       if (remaining < 60) return "text-red-600";
-      return "text-gray-900";
+      return "text-white";
     }, [isFinished, remaining]);
 
     return (
